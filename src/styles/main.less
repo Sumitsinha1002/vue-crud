@@ -1,0 +1,88 @@
+@import './variable.less';
+@import './media.less';
+@import './theme.less';
+
+.main-container {
+    font-family: 'Inter';
+    margin: 24px;
+    border-radius: 10px;
+    padding: 24px;
+    background-color: @backgroundColor;
+    .main-title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 140%;
+        color: @titlePrimary;
+        margin: 0;
+    }
+    .description {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        color: @subTitle;
+        margin: 0;
+    }
+    .card-wrapper {
+        // display: grid;
+        // grid-template-columns: repeat(4, 1fr);
+        // margin-top: 24px;
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+    .error-message {
+        color: @errorText;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+        margin-top: 4px;
+    }
+    .error-input input {
+        border: 1px solid @errorText;
+    }
+    .list-wrap {
+        gap: 16px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 16px;
+    }
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+::v-deep .nitrozen-tooltip-top {
+    color: white;
+    background: @Black2;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 160%;
+    padding: 10px;
+    bottom: 106%;
+    &::after {
+        border-color: @Black2 transparent transparent transparent !important;
+        margin-left: -9px;
+    }
+}
+
+.mirage-scrollbar {
+    /* scrollbar */
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        background-color: @White;
+    }
+    /* Track */
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+        background-color: @White;
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        border-radius: 2.5px;
+        background-color: @DoveGray;
+    }
+}
